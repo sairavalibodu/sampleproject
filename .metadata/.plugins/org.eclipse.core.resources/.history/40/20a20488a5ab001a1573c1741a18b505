@@ -1,0 +1,181 @@
+package com.weblibraries;
+
+import org.openqa.selenium.WebElement;
+
+/*  Method name:rButton
+ *  Description:this method is used to click on the radio button
+ *  Return value: boolean status(true or false)
+ *  Author:Ravali
+ *  Creation date:
+ *  Modified date:
+ *  Comment:
+ * 
+ */
+public class RadioButton {
+	
+	public static boolean radioBtn(WebElement element) {
+		boolean status;
+		try {
+			System.out.println("Just In");
+			element.click();
+			System.out.println("Click");
+			status=true;
+		}
+		catch(Exception e)
+		{
+			status = false;
+		}
+		return status;
+	}
+	
+
+	
+
+	////////////////////////////////////////////////////*
+	/*  Method name:click
+	 *  Description:this method is used to click an element
+	 *  Return value: boolean status(true or false)
+	 *  Author:Ravali
+	 *  Creation date:na
+	 *  Modified date:na
+	 *  Comment:na
+	 * 
+	 */
+    
+public static boolean click(WebElement element )
+{
+	boolean status;
+	try {
+		
+		element.click();
+		System.out.println("just clicked");
+		status=true;
+	}
+	catch(Exception e)
+	{
+		status = false;
+		
+	}
+	return status;
+}
+
+	////////////////////////////////////////////////////////////////////
+/*  Method name:Selected
+ *  Description:this method is used to check whether the element is selected or not
+ *  Return value: boolean status(true or false)
+ *  Author:Ravali
+ *  Creation date:Na
+ *  Modified date:Na
+ *  Comment:Na
+ * 
+ */
+	public static boolean Selected(WebElement element ,boolean expstatus )
+	{
+	boolean status;
+	try {
+		boolean actstatus=element.isSelected();
+		if(actstatus==expstatus) {
+			status=true;
+		}
+		else {
+			status=false;
+		System.out.println("elemet is not selected");
+		}
+	}
+	catch(Exception e)
+	{
+		status = false;
+	}
+	return status;
+	}
+/////////////////////////////////////////////
+	/*  Method name:text
+	 *  Description:this method is used to enter the data into the text field
+	 *  Return value: boolean status(true or false)
+	 *  Author:Ravali
+	 *  Creation date:Na
+	 *  Modified date:Na
+	 *  Comment:Na
+	 * 
+	 */
+	public static  boolean text (WebElement element ,String value)
+	{
+	boolean status;
+	try {
+		element.sendKeys(value);
+		System.out.println("enterin the data into the text feild");
+		status = true;
+	}
+	catch(Exception e)
+	{
+		status = false;
+		System.out.println("unble to enter the data");
+	}
+	return status;
+	}
+///////////////////////////////////////////////
+	/*  Method name:
+	 *  Description:this method is used to click on the radio button
+	 *  Return value: boolean status(true or false)
+	 *  Author:Ravali
+	 *  Creation date:
+	 *  Modified date:
+	 *  Comment:
+	 * 
+	 */
+	public static boolean displayed(WebElement element )
+	{
+		boolean status;
+		try {
+			element.isDisplayed();
+			status = true;
+		}
+		catch(Exception e)
+		{
+			status = false;
+		}
+		return status;
+	}
+	/*  Method name:
+	 *  Description:this method is used to describe the log event
+	 *  Return value: boolean status(true or false)
+	 *  Author:Ravali
+	 *  Creation date:
+	 *  Modified date:
+	 *  Comment:
+	 * 
+	 */
+	public static void  logEvent(boolean status,String passdescription,String faildescription) {
+		if(status) {
+			logEvent(status,passdescription,faildescription);
+			System.out.println(passdescription+faildescription);
+		}
+	}
+		//========================================//
+		/*  Method name:isExist
+		 *  Description:this method is used to check weather element is exists or not
+		 *  Return value: boolean status(true or false)
+		 *  Author:Ravali
+		 *  Creation date:
+		 *  Modified date:
+		 *  Comment:
+		 * 
+		 */
+		public static boolean isExist(WebElement element )
+		{
+			boolean status;
+			try {
+				element.isSelected();
+				status = true;
+			}
+			catch(Exception e)
+			{
+				status = false;
+			}
+			return status;
+		
+	}
+}
+		
+
+	
